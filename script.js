@@ -34,12 +34,4 @@ window.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('typing')) {
         typeTitle();
     }
-    const navbarContainer = document.getElementById('navbar');
-    if (navbarContainer) {
-        fetch('/navbar.html')
-            .then(response => response.text())
-            .then(html => {
-                navbarContainer.innerHTML = html;
-            });
-    }
 }); 
