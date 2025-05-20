@@ -1,0 +1,11 @@
+{
+    "name": "personal-website",
+    "version": "1.0.0",
+    "description": "A personal website with a dark blue theme.",
+    "scripts": {
+        "dev": "vite"
+    },
+    "devDependencies": {
+        "vite": "^5.2.0"
+    }
+}
