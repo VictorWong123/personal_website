@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: "Times New Roman", Times, serif;
     background: #0a1733;
     color: #fff;
     min-height: 100vh;
@@ -91,6 +91,10 @@ body::before {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+}
+
+.intro h2:first-child {
+    text-align: center;
 }
 
 .name {
@@ -232,7 +236,6 @@ body::before {
 }
 
 .section-title {
-    color: #4eaaff;
     font-size: 2rem;
     margin-bottom: 2rem;
     font-weight: 700;
