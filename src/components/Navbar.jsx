@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import resumePDF from '../pdfs/Victor_Wong_Resume__1_.pdf';
+
+const titles = ['Software Engineer', 'Student', 'Data Scientist'];
 
 const navLinks = [
     { id: 'about', label: 'About' },
+    { id: 'education', label: 'Education' },
     { id: 'projects', label: 'Projects' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'skills', label: 'Skills' },
+
 ];
 
 const socials = [
@@ -16,6 +21,10 @@ const email = 'victorwong315@gmail.com';
 const Navbar = () => {
     const [showTooltip, setShowTooltip] = useState(false);
     const [activeSection, setActiveSection] = useState('about');
+    const [typingText, setTypingText] = useState('');
+    const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+    const [charIndex, setCharIndex] = useState(0);
+    const [isDeleting, setIsDeleting] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -34,6 +43,30 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    useEffect(() => {
+        let timeout;
+        const typeTitle = () => {
+            const currentTitle = titles[currentTitleIndex];
+            if (!isDeleting && charIndex < currentTitle.length) {
+                setTypingText(currentTitle.substring(0, charIndex + 1));
+                setCharIndex(charIndex + 1);
+                timeout = setTimeout(typeTitle, 100);
+            } else if (!isDeleting && charIndex === currentTitle.length) {
+                timeout = setTimeout(() => setIsDeleting(true), 1200);
+            } else if (isDeleting && charIndex > 0) {
+                setTypingText(currentTitle.substring(0, charIndex - 1));
+                setCharIndex(charIndex - 1);
+                timeout = setTimeout(typeTitle, 50);
+            } else if (isDeleting && charIndex === 0) {
+                setIsDeleting(false);
+                setCurrentTitleIndex((currentTitleIndex + 1) % titles.length);
+                timeout = setTimeout(typeTitle, 500);
+            }
+        };
+        timeout = setTimeout(typeTitle, 200);
+        return () => clearTimeout(timeout);
+    }, [currentTitleIndex, charIndex, isDeleting]);
+
     const handleEmailClick = async (e) => {
         e.preventDefault();
         try {
@@ -41,6 +74,22 @@ const Navbar = () => {
             setShowTooltip(true);
             setTimeout(() => setShowTooltip(false), 1200);
         } catch (err) { }
+    };
+
+    const handleResumeDownload = async (e) => {
+        e.preventDefault();
+        try {
+            // Create a temporary link element
+            const link = document.createElement('a');
+            link.href = resumePDF;
+            link.download = 'Victor_Wong_Resume.pdf';
+            link.target = '_blank';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        } catch (error) {
+            console.error('Error downloading resume:', error);
+        }
     };
 
     const handleNameClick = (e) => {
@@ -57,8 +106,9 @@ const Navbar = () => {
                     onClick={handleNameClick}
                 >
                     Victor Wong
+                    <div className="sidebar__typing">{typingText}</div>
+
                 </button>
-                <div className="sidebar__title">Software Engineer</div>
                 <nav className="sidebar__nav">
                     <ul>
                         {navLinks.map(link => (
@@ -95,6 +145,14 @@ const Navbar = () => {
                             </svg>
                         </button>
                         {showTooltip && <span className="sidebar__tooltip">Email copied!</span>}
+
+                        <button
+                            className="sidebar__resume-btn"
+                            onClick={handleResumeDownload}
+                            aria-label="Download Resume"
+                        >
+                            Resume
+                        </button>
                     </div>
                 </nav>
             </div>

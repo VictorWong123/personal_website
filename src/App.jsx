@@ -5,6 +5,8 @@ import About from './components/About';
 import Projects from './components/Projects';
 import AllProjects from './components/AllProjects';
 import Resume from './components/Resume';
+import Education from './components/Education';
+import Skills from './components/Skills';
 import './styles.css';
 
 function App() {
@@ -17,8 +19,10 @@ function App() {
                         <Route path="/" element={
                             <>
                                 <section id="about"><About /></section>
+                                <section id="education"><Education /></section>
                                 <section id="projects"><Projects /></section>
-                                <section id="contact"><Resume /></section>
+                                <section id="skills"><Skills /></section>
+
                             </>
                         } />
                         <Route path="/projects" element={<AllProjects />} />

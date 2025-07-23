@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const experience = [
     {
@@ -17,42 +17,11 @@ const experience = [
     },
 ];
 
-const titles = ['Software Engineer', 'Student', 'Data Scientist'];
-
 const About = () => {
-    const [typingText, setTypingText] = useState('');
-    const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
-    const [charIndex, setCharIndex] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
-
-    useEffect(() => {
-        let timeout;
-        const typeTitle = () => {
-            const currentTitle = titles[currentTitleIndex];
-            if (!isDeleting && charIndex < currentTitle.length) {
-                setTypingText(currentTitle.substring(0, charIndex + 1));
-                setCharIndex(charIndex + 1);
-                timeout = setTimeout(typeTitle, 100);
-            } else if (!isDeleting && charIndex === currentTitle.length) {
-                timeout = setTimeout(() => setIsDeleting(true), 1200);
-            } else if (isDeleting && charIndex > 0) {
-                setTypingText(currentTitle.substring(0, charIndex - 1));
-                setCharIndex(charIndex - 1);
-                timeout = setTimeout(typeTitle, 50);
-            } else if (isDeleting && charIndex === 0) {
-                setIsDeleting(false);
-                setCurrentTitleIndex((currentTitleIndex + 1) % titles.length);
-                timeout = setTimeout(typeTitle, 500);
-            }
-        };
-        timeout = setTimeout(typeTitle, 200);
-        return () => clearTimeout(timeout);
-    }, [currentTitleIndex, charIndex, isDeleting]);
 
     return (
         <div className="about-section">
-            <h1>Victor Wong</h1>
-            <span className="about-typing">{typingText}</span>
+            <h2>About Me</h2>
             <p>I build data-driven, accessible digital experiences for the web and beyond.</p>
             <p>
                 I'm a data scientist, software engineer, and student researcher at Union College ('28). I have 4 years of experience in Python, from web development with Flask to data science with matplotlib, numpy, and pandas. In 2024, I dove into web development with HTML, CSS, JavaScript, and React. I love building meaningful projects and collaborating with others.
