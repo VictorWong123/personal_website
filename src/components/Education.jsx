@@ -26,7 +26,6 @@ const Education = () => {
 
             <div className="certificates-card">
                 <h2>Certificates</h2>
-
                 <div className="certificates-list">
                     <div className="certificate-item">
                         <span className="certificate-name">Colt Steele's Web Developer Bootcamp</span>
