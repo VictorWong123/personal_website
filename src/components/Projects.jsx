@@ -9,13 +9,7 @@ const projects = [
             'Full-stack app that automates group grocery splitting. Users input shared and personal items to generate accurate cost breakdowns. Integrated Mistral AI for receipt scanning.',
         tech: ['React', 'JavaScript', 'Tailwind CSS', 'Passport.js', 'Mistral AI'],
     },
-    {
-        title: 'LifeCents',
-        url: 'https://github.com/VictorWong123/LifeCents',
-        description:
-            'Chrome extension that converts online prices into estimated work time based on hourly wage. Uses DOM scraping to dynamically detect and replace prices across websites.',
-        tech: ['JavaScript', 'HTML', 'CSS'],
-    },
+
     {
         title: 'Spotify-Wrapped',
         url: 'https://github.com/VictorWong123/spotify-wrapped',
@@ -23,7 +17,22 @@ const projects = [
             'Web app that generates 10+ interactive visualizations of Spotify listening data. Features secure login, personalized charts, and a compatibility score for comparing music tastes.',
         tech: ['React', 'Node.js', 'D3.js', 'Auth0', 'JavaScript', 'HTML', 'CSS'],
     },
+    {
+        title: 'WriteLight',
+        url: 'https://github.com/freeCodeCamp-2025-Summer-Hackathon/purple-array',
+        description:
+            'WriteLight is a full-stack app that helps users learn new vocabulary through daily reflection and action. Each day, users receive a new word and are challenged to use it meaningfully in their lives. After using their word, they journal their experience by answering prompts like: How did you use today’s word? What gave you hope? What did you learn? How did you show kindness? The app fosters language growth, self-awareness, and positivity—one word at a time.',
+        tech: ['React', 'JavaScript', 'Tailwind CSS', 'DaisyUI'],
+    },
+    {
+        title: 'LifeCents',
+        url: 'https://github.com/VictorWong123/LifeCents',
+        description:
+            'Chrome extension that converts online prices into estimated work time based on hourly wage. Uses DOM scraping to dynamically detect and replace prices across websites.',
+        tech: ['JavaScript', 'HTML', 'CSS'],
+    },
 ];
+
 
 const Projects = () => {
     const navigate = useNavigate();
