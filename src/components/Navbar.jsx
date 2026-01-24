@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import resumePDF from '../pdfs/Victor_Wong_Resume__1_.pdf';
+
+const resumePDF = '/personal_website/Victor_wong_resume (7).pdf';
 
 const titles = ['Software Engineer', 'Student', 'Data Scientist'];
 
@@ -8,7 +9,6 @@ const navLinks = [
     { id: 'education', label: 'Education' },
     { id: 'projects', label: 'Projects' },
     { id: 'skills', label: 'Skills' },
-
 ];
 
 const socials = [
@@ -32,7 +32,7 @@ const Navbar = () => {
                 const el = document.getElementById(link.id);
                 if (!el) return Infinity;
                 const rect = el.getBoundingClientRect();
-                return Math.abs(rect.top - 80); // 80px offset for fixed nav
+                return Math.abs(rect.top - 80);
             });
             const minOffset = Math.min(...offsets);
             const idx = offsets.indexOf(minOffset);
@@ -79,7 +79,6 @@ const Navbar = () => {
     const handleResumeDownload = async (e) => {
         e.preventDefault();
         try {
-            // Create a temporary link element
             const link = document.createElement('a');
             link.href = resumePDF;
             link.download = 'Victor_Wong_Resume.pdf';
@@ -98,24 +97,26 @@ const Navbar = () => {
     };
 
     return (
-        <aside className="sidebar">
-            <div className="sidebar__top">
+        <aside className="w-[340px] min-w-[340px] max-w-[340px] h-screen fixed top-0 left-0 bg-[#0a192f] text-[#ccd6f6] flex flex-col items-start justify-center z-50 border-r border-[#233554] px-10">
+            <div className="w-full flex flex-col items-start justify-center flex-1">
                 <button
-                    className="sidebar__name"
+                    className="cursor-target text-[2.8rem] font-black text-white mb-8 tracking-tight text-left select-none bg-transparent border-none p-0 cursor-pointer whitespace-nowrap"
                     aria-label="Scroll to top"
                     onClick={handleNameClick}
                 >
                     Victor Wong
-                    <div className="sidebar__typing">{typingText}</div>
-
+                    <div className="text-[#64ffda] font-mono text-lg mt-0.5 block min-h-[1.3em] tracking-tight font-semibold">
+                        {typingText}
+                    </div>
                 </button>
-                <nav className="sidebar__nav">
-                    <ul>
+                <nav className="w-full m-0 p-0">
+                    <ul className="list-none p-0 m-0 flex flex-col items-start gap-8">
                         {navLinks.map(link => (
-                            <li key={link.id}>
+                            <li key={link.id} className="w-full">
                                 <a
                                     href={`#${link.id}`}
-                                    className={activeSection === link.id ? 'active' : ''}
+                                    className={`cursor-target text-[#8892b0] text-lg font-bold tracking-wider no-underline relative flex items-center h-8 transition-colors duration-200 hover:text-[#64ffda] ${activeSection === link.id ? 'text-[#64ffda]' : ''
+                                        }`}
                                     onClick={e => {
                                         e.preventDefault();
                                         const el = document.getElementById(link.id);
@@ -127,27 +128,25 @@ const Navbar = () => {
                             </li>
                         ))}
                     </ul>
-                    <div className="sidebar__socials">
+                    <div className="flex flex-row gap-6 items-center mt-12 mb-6 relative">
                         {socials.map(s => (
-                            <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}>
-                                <img src={s.icon} alt={s.label} />
+                            <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="cursor-target">
+                                <img src={s.icon} alt={s.label} className="w-[26px] h-[26px] brightness-0 invert opacity-80 transition-all duration-200 hover:brightness-100 hover:saturate-150 hover:scale-110 hover:-translate-y-0.5 hover:opacity-100" />
                             </a>
                         ))}
                         <button
-                            className="sidebar__email-btn"
+                            className="cursor-target bg-transparent border-none p-0 m-0 cursor-pointer brightness-0 invert opacity-80 transition-all duration-200 hover:brightness-100 hover:saturate-150 hover:scale-110 hover:-translate-y-0.5 hover:opacity-100"
                             aria-label="Copy email"
                             onClick={handleEmailClick}
-                            style={{ background: 'none', border: 'none', padding: 0, margin: 0, cursor: 'pointer' }}
                         >
                             <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                                 <rect x="2" y="4" width="20" height="16" rx="2" />
                                 <path d="M22 6 12 13 2 6" />
                             </svg>
                         </button>
-                        {showTooltip && <span className="sidebar__tooltip">Email copied!</span>}
-
+                        {showTooltip && <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-[#64ffda] text-[#0a192f] px-3 py-1 rounded text-xs whitespace-nowrap">Email copied!</span>}
                         <button
-                            className="sidebar__resume-btn"
+                            className="cursor-target inline-flex items-center justify-center text-[#64ffda] bg-[rgba(100,255,218,0.08)] border border-[#64ffda] text-xs font-medium px-3.5 py-2 rounded cursor-pointer ml-2 transition-all duration-200 hover:bg-[#64ffda] hover:text-[#0a192f] hover:scale-110 hover:-translate-y-0.5"
                             onClick={handleResumeDownload}
                             aria-label="Download Resume"
                         >
@@ -160,4 +159,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar; 
+export default Navbar;

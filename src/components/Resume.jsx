@@ -6,7 +6,7 @@ const Resume = () => (
         <p className="contact-desc">
             I'm currently open to new opportunities and collaborations. Feel free to reach out!
         </p>
-        <a href="/src/pdfs/Victor_Wong_Resume__1_.pdf" className="resume-download" download>
+        <a href="/personal_website/Victor_wong_resume (7).pdf" className="resume-download" download>
             Download Resume
         </a>
     </div>
