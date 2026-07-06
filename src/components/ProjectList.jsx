@@ -1,26 +1,39 @@
 import React, { useState } from 'react';
 import AllProjectsGrid from './AllProjectsGrid';
 import FeaturedProjects from './FeaturedProjects';
+import ProjectDetail from './ProjectDetail';
 import { projects } from '../data/siteData';
 
 const featuredProjects = projects.slice(0, 3);
 
 const ProjectList = () => {
     const [showAll, setShowAll] = useState(false);
+    const [selectedProject, setSelectedProject] = useState(null);
 
     return (
         <>
-            <FeaturedProjects projects={featuredProjects} />
+            <FeaturedProjects projects={featuredProjects} onSelect={setSelectedProject} />
             {!showAll && projects.length > featuredProjects.length && (
-                <button
-                    type="button"
-                    className="text-button view-all-button"
-                    onClick={() => setShowAll(true)}
-                >
-                    view all
-                </button>
+                <div className="view-all-row">
+                    <button
+                        type="button"
+                        className="text-button view-all-button"
+                        onClick={() => setShowAll(true)}
+                    >
+                        view all
+                    </button>
+                </div>
             )}
-            {showAll && <AllProjectsGrid projects={projects} />}
+            <ProjectDetail
+                project={selectedProject}
+                onClose={() => setSelectedProject(null)}
+            />
+            {showAll && (
+                <AllProjectsGrid
+                    projects={projects}
+                    onSelect={setSelectedProject}
+                />
+            )}
         </>
     );
 };

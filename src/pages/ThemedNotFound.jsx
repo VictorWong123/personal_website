@@ -5,6 +5,7 @@ import SectionHeading from '../components/SectionHeading';
 const ThemedNotFound = () => (
     <section className="content-section" aria-labelledby="not-found-heading">
         <SectionHeading
+            id="not-found-heading"
             eyebrow="404"
             title="this page does not exist."
         />

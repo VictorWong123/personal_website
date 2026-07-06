@@ -66,24 +66,28 @@ export const projects = [
     {
         title: 'ShopNSplit',
         url: 'https://github.com/VictorWong123/shopNsplit',
+        summary: 'Receipt-based grocery splitting for groups.',
         description: 'Full-stack app that automates group grocery splitting. Users input shared and personal items to generate accurate cost breakdowns. Integrated Mistral AI for receipt scanning.',
         tech: ['React', 'JavaScript', 'Tailwind CSS', 'Passport.js', 'Mistral AI'],
     },
     {
         title: 'Spotify-Wrapped',
         url: 'https://github.com/VictorWong123/spotify-wrapped',
+        summary: 'Personal Spotify listening data visualized.',
         description: 'Web app that generates 10+ interactive visualizations of Spotify listening data. Features secure login, personalized charts, and a compatibility score for comparing music tastes.',
         tech: ['React', 'Node.js', 'D3.js', 'Auth0', 'JavaScript', 'HTML', 'CSS'],
     },
     {
         title: 'WriteLight',
         url: 'https://github.com/freeCodeCamp-2025-Summer-Hackathon/purple-array',
+        summary: 'Daily vocabulary learning through reflection.',
         description: 'Full-stack app that helps users learn new vocabulary through daily reflection and action. Users receive a new word, use it meaningfully, and journal their experience through guided prompts.',
         tech: ['React', 'JavaScript', 'Tailwind CSS', 'DaisyUI'],
     },
     {
         title: 'LifeCents',
         url: 'https://github.com/VictorWong123/LifeCents',
+        summary: 'Online prices translated into work time.',
         description: 'Chrome extension that converts online prices into estimated work time based on hourly wage. Uses DOM scraping to dynamically detect and replace prices across websites.',
         tech: ['JavaScript', 'HTML', 'CSS'],
     },

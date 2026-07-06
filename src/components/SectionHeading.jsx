@@ -1,9 +1,9 @@
 import React from 'react';
 
-const SectionHeading = ({ eyebrow, title }) => (
+const SectionHeading = ({ eyebrow, title, id }) => (
     <div className="section-heading">
         {eyebrow && <p className="eyebrow">{eyebrow}</p>}
-        <h1>{title}</h1>
+        <h1 id={id}>{title}</h1>
     </div>
 );
 

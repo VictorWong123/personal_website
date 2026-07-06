@@ -7,9 +7,8 @@ const fanClasses = [
     'featured-project is-right',
 ];
 
-const FeaturedProjects = ({ projects }) => (
-    <section className="content-section" aria-labelledby="featured-projects-heading">
-        <h2 id="featured-projects-heading">featured</h2>
+const FeaturedProjects = ({ projects, onSelect }) => (
+    <section className="content-section" aria-label="Projects">
         <div className="featured-projects">
             {projects.map((project, index) => (
                 <ProjectItem
@@ -17,6 +16,7 @@ const FeaturedProjects = ({ projects }) => (
                     project={project}
                     variant="featured"
                     className={fanClasses[index]}
+                    onSelect={onSelect}
                 />
             ))}
         </div>
