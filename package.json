@@ -2,11 +2,11 @@
     "name": "personal-website",
     "version": "1.0.0",
     "type": "module",
-    "description": "A personal website with a dark blue theme.",
+    "description": "A personal portfolio website.",
     "homepage": "https://victorwong123.github.io/personal_website",
     "scripts": {
         "dev": "vite",
-        "build": "vite build && cp src/pdfs/Victor_Wong_Resume__1_.pdf docs/ && cp src/pdfs/Victor_Wong_Resume__1_.pdf public/",
+        "build": "vite build",
         "preview": "vite preview",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d dist"

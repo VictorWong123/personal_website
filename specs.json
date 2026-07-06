@@ -1,0 +1,245 @@
+{
+  "project": {
+    "name": "Personal Website Redesign",
+    "goal": "Restyle the existing personal website into a minimal editorial portfolio inspired by the provided reference image.",
+    "implementationRule": "Ignore all current visual styles. Preserve and reuse existing components, routes, data, and functionality whenever they already exist."
+  },
+  "designDirection": {
+    "keywords": [
+      "minimal",
+      "editorial",
+      "monospace",
+      "quiet",
+      "warm",
+      "technical",
+      "spacious",
+      "personal"
+    ],
+    "principles": [
+      "Content-first layout",
+      "Generous whitespace",
+      "Very limited color palette",
+      "Small, deliberate interactions",
+      "No decorative cards, gradients, shadows, or glass effects"
+    ]
+  },
+  "colors": {
+    "background": "#F7F6F2",
+    "surface": "#F7F6F2",
+    "textPrimary": "#111111",
+    "textSecondary": "#8A8178",
+    "textMuted": "#B8AEA3",
+    "border": "#E5E0D9",
+    "accent": "#1A9B50",
+    "link": "#111111",
+    "linkHover": "#1A9B50",
+    "selectionBackground": "#DCEFE2",
+    "selectionText": "#111111"
+  },
+  "typography": {
+    "fontFamily": {
+      "primary": "\"IBM Plex Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", monospace",
+      "fallback": "monospace"
+    },
+    "fontLoading": "Use an existing locally configured monospace font if present. Otherwise load IBM Plex Mono.",
+    "weights": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600
+    },
+    "scale": {
+      "brand": {
+        "desktop": "22px",
+        "mobile": "19px",
+        "weight": 500,
+        "lineHeight": 1.2
+      },
+      "nav": {
+        "desktop": "16px",
+        "mobile": "15px",
+        "weight": 400,
+        "lineHeight": 1.4
+      },
+      "eyebrow": {
+        "desktop": "16px",
+        "mobile": "14px",
+        "weight": 400,
+        "lineHeight": 1.6
+      },
+      "hero": {
+        "desktop": "28px",
+        "tablet": "25px",
+        "mobile": "22px",
+        "weight": 400,
+        "lineHeight": 1.45,
+        "maxWidth": "620px"
+      },
+      "body": {
+        "desktop": "18px",
+        "mobile": "16px",
+        "weight": 400,
+        "lineHeight": 1.65
+      },
+      "footer": {
+        "desktop": "16px",
+        "mobile": "14px",
+        "weight": 400,
+        "lineHeight": 1.4
+      }
+    },
+    "letterSpacing": {
+      "default": "0",
+      "smallText": "0.01em"
+    },
+    "emphasis": {
+      "style": "Use medium or semibold weight for important phrases rather than larger font sizes.",
+      "heroHighlight": "Apply weight 600 to one short phrase inside the hero statement."
+    }
+  },
+  "layout": {
+    "page": {
+      "maxWidth": "856px",
+      "desktopPaddingX": "32px",
+      "tabletPaddingX": "28px",
+      "mobilePaddingX": "20px",
+      "minHeight": "100vh"
+    },
+    "contentAlignment": "Centered page container with all text left-aligned.",
+    "header": {
+      "display": "flex",
+      "justifyContent": "space-between",
+      "alignItems": "baseline",
+      "paddingTopDesktop": "44px",
+      "paddingTopMobile": "28px",
+      "gap": "24px"
+    },
+    "main": {
+      "paddingTopDesktop": "78px",
+      "paddingTopMobile": "54px",
+      "paddingBottomDesktop": "92px",
+      "paddingBottomMobile": "64px"
+    },
+    "hero": {
+      "eyebrowMarginBottom": "30px",
+      "headlineMarginBottom": "34px",
+      "bodyMaxWidth": "600px"
+    },
+    "footer": {
+      "borderTop": "1px solid #E5E0D9",
+      "paddingTop": "30px",
+      "paddingBottom": "48px",
+      "marginTopDesktop": "90px",
+      "marginTopMobile": "64px"
+    }
+  },
+  "navigation": {
+    "items": [
+      "home",
+      "work",
+      "projects"
+    ],
+    "style": {
+      "display": "flex",
+      "gapDesktop": "28px",
+      "gapMobile": "18px",
+      "textTransform": "lowercase"
+    },
+    "activeState": {
+      "color": "#111111",
+      "underline": "1px solid #1A9B50",
+      "underlineOffset": "8px"
+    },
+    "inactiveState": {
+      "color": "#8A8178"
+    },
+    "mobileBehavior": "Keep navigation visible on one line when possible. Do not use a hamburger menu unless the current project already requires one."
+  },
+  "content": {
+    "home": {
+      "eyebrow": "new work / open to interesting work",
+      "heroTemplate": "builds [strong phrase] for [areas of focus].",
+      "introInstruction": "Use the existing personal information, roles, interests, and project names already present in the website. Do not invent biographical claims.",
+      "supportingCopy": "Use existing personal copy where available. Use lorem ipsum only where content is missing.",
+      "contactCta": "End the supporting paragraph with a short underlined contact link such as “say hello.”"
+    },
+    "work": {
+      "instruction": "Reuse the existing work or experience component and data. Restyle it into a simple vertical text list without cards.",
+      "itemStructure": [
+        "date or timeframe",
+        "role and organization",
+        "one concise description",
+        "optional text link"
+      ]
+    },
+    "projects": {
+      "instruction": "Replace the reference site's writing section with projects. Reuse the existing projects component and existing project data.",
+      "itemStructure": [
+        "project title",
+        "short description",
+        "technology or status metadata",
+        "repository and live links when already available"
+      ],
+      "visualStyle": "Use a clean stacked list separated by subtle borders. Do not use image-heavy project cards unless the current project explicitly depends on them."
+    }
+  },
+  "components": {
+    "reusePolicy": [
+      "Reuse existing Header, Navigation, Footer, About, Experience, Project, Contact, and layout components when present.",
+      "Change their markup only when necessary for accessibility or the new layout.",
+      "Do not create duplicate components that provide the same function.",
+      "Keep existing routing, link destinations, project data, analytics, forms, and integrations working."
+    ],
+    "preferredStructure": [
+      "SiteLayout",
+      "Header",
+      "PrimaryNav",
+      "HomeIntro",
+      "WorkList",
+      "ProjectList",
+      "Footer"
+    ]
+  },
+  "interaction": {
+    "transitions": "color 150ms ease, border-color 150ms ease, opacity 150ms ease",
+    "links": {
+      "default": "Underlined only for inline calls to action; navigation uses the active underline.",
+      "hover": "Change to accent green.",
+      "focus": "2px solid #1A9B50 with 3px offset."
+    },
+    "motion": "No entrance animations, parallax, or large transforms. Respect prefers-reduced-motion."
+  },
+  "responsive": {
+    "breakpoints": {
+      "mobile": "0-639px",
+      "tablet": "640-899px",
+      "desktop": "900px+"
+    },
+    "rules": [
+      "Allow the header to wrap only on very narrow screens.",
+      "Keep line lengths readable and below approximately 65 characters.",
+      "Reduce vertical spacing and font sizes gradually rather than radically changing the composition.",
+      "Maintain at least 44px interactive tap targets where practical."
+    ]
+  },
+  "accessibility": {
+    "requirements": [
+      "Use semantic header, nav, main, section, and footer elements.",
+      "Maintain visible keyboard focus states.",
+      "Use aria-current=\"page\" for the active navigation item.",
+      "Meet WCAG AA contrast.",
+      "Preserve meaningful heading hierarchy.",
+      "Do not use color alone to communicate state."
+    ]
+  },
+  "avoid": [
+    "Gradients",
+    "Drop shadows",
+    "Rounded card grids",
+    "Large hero images",
+    "Glassmorphism",
+    "Bright multicolor palettes",
+    "Excessive animations",
+    "Generic startup marketing language",
+    "Invented personal information"
+  ]
+}

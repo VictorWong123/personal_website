@@ -1,1 +1,4 @@
 node_modules/
+.tmp/
+vite.out.log
+vite.err.log
