@@ -1,11 +1,9 @@
 export const profile = {
-    name: 'victor wong',
-    eyebrow: 'boston / looking to build new projects',
-    headlineStart: 'builds',
-    headlineStrong: 'data-driven, accessible digital experiences',
-    headlineEnd: 'for the web and beyond.',
-    intro: "I'm a data scientist, software engineer, and student researcher at Union College ('28). I have 4 years of experience in Python, from web development with Flask to data science with matplotlib, numpy, and pandas. In 2024, I dove into web development with HTML, CSS, JavaScript, and React. I love building meaningful projects and collaborating with others.",
-    note: 'Outside of tech, I enjoy anime, ping pong, and chess.',
+    name: 'Victor Wong',
+    eyebrow: 'Boston / looking to build interesting projects',
+    headline: 'Software Engineer.',
+    intro: "Always Learning. Always Building. Currently interning at The First Electronics Corporation. Previous SWE Intern at BIS Computer Solutions and EpiBuild. If interested in working together, reach out.",
+    note: "When I don't code, you can find me playing chess or working out.",
     email: 'victorwong315@gmail.com',
     resumeHref: '/personal_website/Victor_wong_resume (7).pdf',
     links: {
@@ -38,11 +36,11 @@ export const education = [
         date: 'Expected June 2028',
         details: [
             'Relevant coursework: Intro to Computer Science, Multivariable Calculus, Set Theory, Data Visualization',
-            'Activities: Goldman Sachs Possibilities Summit, CodePath Interview Prep, freeCodeCamp, ICPC',
+            'Activities: CodePath Interview Prep, MLT Career Prep Fellow, ICPC',
         ],
     },
 ];
-
+    
 export const skillGroups = [
     {
         title: 'Programming Languages',

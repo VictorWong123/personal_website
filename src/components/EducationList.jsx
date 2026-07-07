@@ -1,9 +1,13 @@
 import React from 'react';
 import { education } from '../data/siteData';
 
-const EducationList = () => (
-    <section className="content-section" aria-labelledby="education-heading">
-        <h2 id="education-heading">education</h2>
+const EducationList = ({ showHeading = true }) => (
+    <section
+        className="content-section"
+        aria-label={showHeading ? undefined : 'education'}
+        aria-labelledby={showHeading ? 'education-heading' : undefined}
+    >
+        {showHeading && <h2 id="education-heading">education</h2>}
         <div className="list-stack">
             {education.map(item => (
                 <article className="text-item" key={item.school}>

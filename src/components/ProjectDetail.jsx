@@ -16,7 +16,6 @@ const ProjectDetail = ({ project, onClose }) => {
                     image placeholder
                 </div>
                 <div className="project-detail-copy">
-                    <p className="item-meta">project detail</p>
                     <h2 id="project-detail-title">{project.title}</h2>
                     <p>{project.description}</p>
                     <p className="item-tags">{project.tech.join(' / ')}</p>
