@@ -1,29 +1,74 @@
 # Repository Guidelines
 
-## Project Structure & Module Organization
+## Project Overview
 
-This is a Vite + React personal portfolio site. Application code lives in `src/`, with route setup in `src/App.jsx`, page-level views in `src/pages/`, reusable UI in `src/components/`, global styles in `src/index.css`, and image assets in `src/images/`. Static public files belong in `public/`. The `docs/` directory is the GitHub Pages build output configured by `vite.config.js`; avoid hand-editing generated files there unless intentionally patching deployed output. Root JSON files such as `landing_page.json` and `project_UI.json` hold content/design data.
+This repository is a Vite + React personal portfolio site. It uses React Router for page routing, Tailwind utility classes for styling, and static content/data in JavaScript modules. Keep changes small, visual, and consistent with the current portfolio tone.
 
-## Build, Test, and Development Commands
+## Project Structure
 
-- `npm install` installs project dependencies from `package-lock.json`.
-- `npm run dev` starts the Vite development server on port `3000`.
-- `npm run build` creates the production build in `docs/` and copies resume PDFs as configured in `package.json`.
-- `npm run preview` serves the built app locally for a production-style check.
-- `npm run deploy` publishes the `dist/` directory through `gh-pages`; confirm this matches the intended deploy target before using it, because Vite currently builds to `docs/`.
+- `src/main.jsx` mounts the React app.
+- `src/App.jsx` defines the route tree.
+- `src/pages/` contains page-level route views.
+- `src/components/` contains reusable UI components.
+- `src/data/siteData.js` stores portfolio content used by the UI.
+- `src/images/` stores imported image assets.
+- `src/index.css` contains global Tailwind and site styles.
+- `public/` contains static files copied directly by Vite, including the resume PDF.
+- `dist/` is generated production output from `npm run build`.
+- `docs/` contains older/static deployment artifacts. Do not hand-edit generated files unless the task explicitly targets deployed output.
 
-## Coding Style & Naming Conventions
+## Commands
 
-Use ES modules and React functional components. Keep component files in PascalCase, such as `Hero.jsx` or `AllProjects.jsx`, and use camelCase for local variables, hooks, and handlers. Follow the existing JSX style: 4-space indentation, single quotes in imports/strings, Tailwind utility classes for layout and styling, and concise inline SVG only for icons. Prefer placing shared UI behavior in `src/components/` and page composition in `src/pages/`.
+- `npm install` installs dependencies from `package-lock.json`.
+- `npm run dev` starts the Vite dev server. The configured port is `3000`.
+- `npm run build` creates the production build in `dist/`.
+- `npm run preview` serves the built app locally for production-style verification.
+- `npm run deploy` runs the build and publishes `dist/` through `gh-pages`.
 
-## Testing Guidelines
+## Coding Style
 
-No automated test framework is currently configured. For changes, at minimum run `npm run build` and manually check the impacted routes with `npm run dev` or `npm run preview`. If tests are added, use a React-friendly stack such as Vitest + React Testing Library, name files `*.test.jsx`, and colocate them next to the component or page they cover.
+- Use ES modules and React functional components.
+- Name component files in PascalCase, for example `ProjectItem.jsx`.
+- Use camelCase for local variables, hooks, and handlers.
+- Match the existing style: 4-space indentation, single-quoted imports/strings, and concise JSX.
+- Prefer Tailwind utility classes for layout and visual styling.
+- Keep page composition in `src/pages/`; move reusable behavior and markup into `src/components/`.
+- Keep portfolio content updates in `src/data/siteData.js` unless a structural UI change is needed.
 
-## Commit & Pull Request Guidelines
+## UI Guidelines
 
-Recent commits use short, imperative summaries such as `added WriteLight project to website` and `reordered sections`. Keep commits focused and describe the visible change. Pull requests should include a brief summary, screenshots for UI changes, build verification, and any deployment notes, especially when touching `vite.config.js`, `package.json`, `docs/`, or resume assets.
+- Preserve the current clean portfolio design language.
+- Use real project, work, education, and contact content from `siteData.js`; avoid duplicating hard-coded content in components.
+- Check responsive behavior for home, projects, work, and not-found routes when changing layout or navigation.
+- Avoid adding heavy animation or new visual systems unless the task specifically calls for it.
 
-## Agent-Specific Instructions
+## Testing And Verification
 
-Before editing, check whether generated output or user changes already exist and preserve unrelated work. Prefer small, scoped changes that match the current React/Tailwind structure.
+No automated test framework is configured. For code changes:
+
+- Run `npm run build` before finishing.
+- Use `npm run dev` or `npm run preview` for manual checks when changing UI, routes, assets, or content.
+- For responsive UI changes, check at least one desktop width and one mobile width.
+- If tests are added later, prefer Vitest + React Testing Library and name files `*.test.jsx`.
+
+## Deployment Notes
+
+The current Vite build output is `dist/`, and `npm run deploy` publishes `dist/` with `gh-pages`. `vite.config.js` currently sets `base: '/'`; confirm the target host before changing `base`, `homepage`, `vercel.json`, or deploy scripts.
+
+## Git And Pull Requests
+
+- Keep commits focused with short imperative summaries.
+- Include screenshots or a clear visual summary for UI changes.
+- Mention build verification in pull requests.
+- Call out deployment-impacting changes, especially changes to `vite.config.js`, `package.json`, `vercel.json`, `public/`, `dist/`, or `docs/`.
+
+## Agent Instructions
+
+- Before editing, check `git status --short` and preserve unrelated user changes.
+- Prefer direct, scoped edits that follow existing React/Tailwind patterns.
+- Do not manually edit generated build output unless explicitly requested.
+- Do not introduce new dependencies for simple UI or content changes.
+- If a dependency is necessary, explain why and update `package-lock.json` through `npm install`.
+- Use `rg` or `rg --files` for repository search.
+- Run `npm run build` after implementation unless the change is documentation-only.
+- For documentation-only changes, no build is required.

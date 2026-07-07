@@ -115,15 +115,15 @@ h3 {
 .brand-wrap {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
 }
 
 .brand-image-stack {
     position: relative;
     flex: 0 0 auto;
     display: block;
-    width: 53px;
-    height: 53px;
+    width: 80px;
+    height: 80px;
     overflow: hidden;
     border-radius: 50%;
     background: var(--color-bg);
@@ -137,6 +137,16 @@ h3 {
     border-radius: 50%;
     object-fit: cover;
     transition: opacity 150ms ease;
+}
+
+.brand-image-default {
+    object-position: 50% 58%;
+}
+
+.brand-image-hover {
+    object-position: 57% 44%;
+    transform: scale(2);
+    transform-origin: 57% 44%;
 }
 
 .brand-image-ring {
@@ -180,7 +190,7 @@ h3 {
 
 .brand-link {
     color: var(--color-text);
-    font-size: 22px;
+    font-size: 25px;
     font-weight: 500;
     line-height: 1.2;
     text-decoration: none;
@@ -531,12 +541,12 @@ h3 {
     }
 
     .brand-image-stack {
-        width: 45px;
-        height: 45px;
+        width: 70px;
+        height: 70px;
     }
 
     .brand-link {
-        font-size: 19px;
+        font-size: 21px;
     }
 
     .primary-nav {
