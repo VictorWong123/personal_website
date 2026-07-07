@@ -5,7 +5,7 @@ export const profile = {
     intro: "Always Learning. Always Building. Currently interning at The First Electronics Corporation. Previous SWE Intern at BIS Computer Solutions and EpiBuild. If interested in working together, reach out.",
     note: "When I don't code, you can find me playing chess or working out.",
     email: 'victorwong315@gmail.com',
-    resumeHref: '/personal_website/Victor_wong_resume (7).pdf',
+    resumeHref: `${import.meta.env.BASE_URL}Victor_wong_resume (7).pdf`,
     links: {
         github: 'https://github.com/VictorWong123',
         linkedin: 'https://www.linkedin.com/in/victor-wong-58029a238/',

@@ -4,6 +4,9 @@
     "type": "module",
     "description": "A personal portfolio website.",
     "homepage": "https://victorwong123.github.io/personal_website",
+    "engines": {
+        "node": "20.x"
+    },
     "scripts": {
         "dev": "vite",
         "build": "vite build",
