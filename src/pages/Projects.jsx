@@ -3,7 +3,7 @@ import ProjectList from '../components/ProjectList';
 
 const Projects = () => (
     <>
-        <h1 className="page-title">projects.</h1>
+        <h1 className="page-title">projects built or in progress.</h1>
         <ProjectList />
     </>
 );
