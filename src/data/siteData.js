@@ -62,7 +62,7 @@ export const skillGroups = [
     },
     {
         title: 'Tools & Frameworks',
-        skills: ['React', 'Next.js', 'Node.js', 'Express.js', 'FastAPI', 'MongoDB', 'PostgreSQL', 'Supabase', 'Git', 'Docker'],
+        skills: ['React', 'Next.js', 'FastAPI', 'MongoDB', 'PostgreSQL','SQL', 'Supabase', 'Git', 'Docker'],
     },
 ];
 
@@ -94,7 +94,7 @@ export const projects = [
         url: 'https://github.com/VictorWong123/strengthOS',
         summary: 'Fitness tracker with an MCP server.',
         description: 'Workout tracker with a FastMCP server, using Supabase, PostgreSQL and Typescript to connect to LLMs for real time feedback.',
-        tech: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'FastAPI', 'FastMCP', 'Supabase', 'PostgreSQL', 'Vercel', 'Render'],
+        tech: ['React', 'TypeScript', 'FastAPI', 'FastMCP', 'Supabase', 'PostgreSQL'],
     },
     {
         title: 'VARify',
@@ -118,7 +118,7 @@ export const projects = [
         url: 'https://github.com/VictorWong123/Orbits',
         summary: 'Private personal relationship manager.',
         description: 'Private personal relationship manager for keeping track of people, facts, preferences, interests, notes, and upcoming events. It works offline with localStorage and syncs to the cloud when signed in.',
-        tech: ['Next.js', 'TypeScript', 'Supabase', 'Vercel', 'localStorage', 'Playwright'],
+        tech: ['Next.js', 'TypeScript', 'Supabase'],
     },
     {
         title: 'multidoku',
@@ -126,7 +126,7 @@ export const projects = [
         url: 'https://github.com/VictorWong123/multidoku',
         summary: 'Sudoku app with single-player puzzles and multiplayer rooms.',
         description: 'Sudoku web app with single-player puzzles and real-time multiplayer rooms using WebSockets.',
-        tech: ['MongoDB', 'Express', 'React', 'Node.js', 'Socket.io', 'Vite', 'WebSockets'],
+        tech: ['MongoDB', 'Express', 'React', 'Javascript','Node.js', 'WebSockets'],
     },
     {
         title: 'ShopNSplit',
@@ -134,7 +134,7 @@ export const projects = [
         url: 'https://github.com/VictorWong123/shopNsplit',
         summary: 'Receipt-based grocery splitting for groups.',
         description: 'Full-stack app that automates group grocery splitting. Users input shared and personal items to generate accurate cost breakdowns. Integrated Gemini for receipt scanning.',
-        tech: ['React', 'JavaScript', 'Tailwind CSS', 'Supabase', 'Gemiini'],
+        tech: ['React', 'JavaScript', 'Tailwind CSS', 'Supabase', 'Gemini'],
     },
     {
         title: 'Spotify-Wrapped',
@@ -142,7 +142,7 @@ export const projects = [
         url: 'https://github.com/VictorWong123/spotify-wrapped',
         summary: 'Personal Spotify listening data visualized.',
         description: 'Web app that generates 10+ interactive visualizations of Spotify listening data. Features secure login, personalized charts, and a compatibility score for comparing music tastes.',
-        tech: ['React', 'Node.js', 'D3.js', 'JavaScript'],
+        tech: ['React', 'Node.js', 'D3.js', 'JavaScript', 'Spotify API'],
     },
     {
         title: 'WriteLight',

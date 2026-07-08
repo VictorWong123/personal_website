@@ -15,7 +15,7 @@ This repository is a Vite + React personal portfolio site. It uses React Router 
 - `src/index.css` contains global Tailwind and site styles.
 - `public/` contains static files copied directly by Vite, including the resume PDF.
 - `dist/` is generated production output from `npm run build`.
-- `docs/` contains older/static deployment artifacts. Do not hand-edit generated files unless the task explicitly targets deployed output.
+- `vercel.json` contains the Vercel deployment settings.
 
 ## Commands
 
@@ -23,7 +23,7 @@ This repository is a Vite + React personal portfolio site. It uses React Router 
 - `npm run dev` starts the Vite dev server. The configured port is `3000`.
 - `npm run build` creates the production build in `dist/`.
 - `npm run preview` serves the built app locally for production-style verification.
-- `npm run deploy` runs the build and publishes `dist/` through `gh-pages`.
+- Vercel runs `npm run build` and serves the generated `dist/` output.
 
 ## Coding Style
 
@@ -53,14 +53,14 @@ No automated test framework is configured. For code changes:
 
 ## Deployment Notes
 
-The current Vite build output is `dist/`, and `npm run deploy` publishes `dist/` with `gh-pages`. `vite.config.js` currently sets `base: '/'`; confirm the target host before changing `base`, `homepage`, `vercel.json`, or deploy scripts.
+The current Vite build output is `dist/`, and Vercel serves `dist/` using `vercel.json`. `vite.config.js` currently sets `base: '/'`; confirm the target host before changing `base`, `vercel.json`, or build scripts.
 
 ## Git And Pull Requests
 
 - Keep commits focused with short imperative summaries.
 - Include screenshots or a clear visual summary for UI changes.
 - Mention build verification in pull requests.
-- Call out deployment-impacting changes, especially changes to `vite.config.js`, `package.json`, `vercel.json`, `public/`, `dist/`, or `docs/`.
+- Call out deployment-impacting changes, especially changes to `vite.config.js`, `package.json`, `vercel.json`, `public/`, or `dist/`.
 
 ## Agent Instructions
 

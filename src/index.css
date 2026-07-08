@@ -298,12 +298,12 @@ h3 {
 }
 
 .skills-page-section .page-title {
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0;
+    border-bottom: 0;
 }
 
 .page-section > .content-section {
-    margin-top: 34px;
+    margin-top: 10px;
 }
 
 .content-section {
@@ -490,12 +490,16 @@ h3 {
 }
 
 .skills-list-stack {
-    border-top: 0;
+    border-top: 1px solid var(--color-border);
 }
 
 .text-item {
     padding: 28px 0;
     border-bottom: 1px solid var(--color-border);
+}
+
+.text-item h3 {
+    overflow-wrap: anywhere;
 }
 
 .skill-item {
@@ -661,7 +665,7 @@ h3 {
     }
 
     .page-section > .content-section {
-        margin-top: 30px;
+        margin-top: 10px;
     }
 
     .intro-copy {
