@@ -54,7 +54,7 @@ const Work = () => {
                 <h1 className="page-title">education.</h1>
                 <EducationList showHeading={false} />
             </section>
-            <section className="page-section">
+            <section className="page-section skills-page-section">
                 <h1 className="page-title">skills.</h1>
                 <SkillsList showHeading={false} />
             </section>

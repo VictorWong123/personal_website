@@ -25,20 +25,23 @@ const ProjectItem = ({ project, variant = 'list', className = '', onSelect }) =>
             aria-label={`Read more about ${project.title}`}
         >
             <div className="project-card-main">
-                <h3>
-                    {project.url ? (
-                        <a
-                            href={project.url}
-                            target="_blank"
-                            rel="noreferrer"
-                            onClick={event => event.stopPropagation()}
-                        >
-                            {project.title}
-                        </a>
-                    ) : (
-                        project.title
-                    )}
-                </h3>
+                <div className="project-card-header">
+                    <h3>
+                        {project.url ? (
+                            <a
+                                href={project.url}
+                                target="_blank"
+                                rel="noreferrer"
+                                onClick={event => event.stopPropagation()}
+                            >
+                                {project.title}
+                            </a>
+                        ) : (
+                            project.title
+                        )}
+                    </h3>
+                    {project.category && <p className="project-label">{project.category}</p>}
+                </div>
                 <p>{project.summary}</p>
             </div>
         </article>

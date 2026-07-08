@@ -3,6 +3,8 @@ import React from 'react';
 const ProjectDetail = ({ project, onClose }) => {
     if (!project) return null;
 
+    const imageSrc = project.image || project.imageUrl;
+
     return (
         <div className="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-detail-title">
             <button
@@ -11,10 +13,14 @@ const ProjectDetail = ({ project, onClose }) => {
                 aria-label="Close project detail"
                 onClick={onClose}
             />
-            <section className="project-detail">
-                <div className="project-image-placeholder" aria-hidden="true">
-                    image placeholder
-                </div>
+            <section className={`project-detail ${imageSrc ? '' : 'project-detail-no-image'}`.trim()}>
+                {imageSrc && (
+                    <img
+                        className="project-detail-image"
+                        src={imageSrc}
+                        alt=""
+                    />
+                )}
                 <div className="project-detail-copy">
                     <h2 id="project-detail-title">{project.title}</h2>
                     <p>{project.description}</p>
@@ -25,11 +31,11 @@ const ProjectDetail = ({ project, onClose }) => {
                                 github
                             </a>
                         )}
-                        <button type="button" className="text-button" onClick={onClose}>
-                            close
-                        </button>
                     </div>
                 </div>
+                <button type="button" className="text-button project-detail-close" onClick={onClose}>
+                    close
+                </button>
             </section>
         </div>
     );

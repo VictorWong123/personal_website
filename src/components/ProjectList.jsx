@@ -5,6 +5,7 @@ import ProjectDetail from './ProjectDetail';
 import { projects } from '../data/siteData';
 
 const featuredProjects = projects.slice(0, 3);
+const allProjects = projects.slice(3);
 
 const ProjectList = () => {
     const [showAll, setShowAll] = useState(false);
@@ -13,7 +14,7 @@ const ProjectList = () => {
     return (
         <>
             <FeaturedProjects projects={featuredProjects} onSelect={setSelectedProject} />
-            {!showAll && projects.length > featuredProjects.length && (
+            {!showAll && allProjects.length > 0 && (
                 <div className="view-all-row">
                     <button
                         type="button"
@@ -29,10 +30,21 @@ const ProjectList = () => {
                 onClose={() => setSelectedProject(null)}
             />
             {showAll && (
-                <AllProjectsGrid
-                    projects={projects}
-                    onSelect={setSelectedProject}
-                />
+                <>
+                    <AllProjectsGrid
+                        projects={allProjects}
+                        onSelect={setSelectedProject}
+                    />
+                    <div className="view-all-row">
+                        <button
+                            type="button"
+                            className="text-button view-all-button"
+                            onClick={() => setShowAll(false)}
+                        >
+                            collapse
+                        </button>
+                    </div>
+                </>
             )}
         </>
     );

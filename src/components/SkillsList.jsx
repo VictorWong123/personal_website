@@ -8,9 +8,9 @@ const SkillsList = ({ showHeading = true }) => (
         aria-labelledby={showHeading ? 'skills-heading' : undefined}
     >
         {showHeading && <h2 id="skills-heading">skills</h2>}
-        <div className="list-stack">
+        <div className="list-stack skills-list-stack">
             {skillGroups.map(group => (
-                <article className="text-item" key={group.title}>
+                <article className="text-item skill-item" key={group.title}>
                     <h3>{group.title.toLowerCase()}</h3>
                     <p>{group.skills.join(' / ')}</p>
                 </article>
