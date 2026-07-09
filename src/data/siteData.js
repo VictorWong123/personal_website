@@ -5,7 +5,7 @@ export const profile = {
     intro: 'Always Learning. Always Building. Currently an Engineering Intern at Trexon and Undergraduate HCI Researcher at Union College. Previous SWE Intern at BIS Computer Solutions and EpiBuild. If interested in working together, reach out.',
     note: "When I don't code, you can find me playing chess or working out.",
     email: 'victorwong315@gmail.com',
-    resumeHref: `${import.meta.env.BASE_URL}Victor_wong_resume (7).pdf`,
+    resumeHref: `${import.meta.env.BASE_URL}Victor_wong_resume.pdf`,
     links: {
         github: 'https://github.com/VictorWong123',
         linkedin: 'https://www.linkedin.com/in/victorw12/',
@@ -54,7 +54,7 @@ export const education = [
         ],
     },
 ];
-    
+
 export const skillGroups = [
     {
         title: 'Languages',
@@ -62,7 +62,7 @@ export const skillGroups = [
     },
     {
         title: 'Tools & Frameworks',
-        skills: ['React', 'Next.js', 'FastAPI', 'MongoDB', 'PostgreSQL','SQL', 'Supabase', 'Git', 'Docker'],
+        skills: ['React', 'Next.js', 'FastAPI', 'MongoDB', 'PostgreSQL', 'SQL', 'Supabase', 'Git', 'Docker'],
     },
 ];
 
@@ -126,7 +126,7 @@ export const projects = [
         url: 'https://github.com/VictorWong123/multidoku',
         summary: 'Sudoku app with single-player puzzles and multiplayer rooms.',
         description: 'Sudoku web app with single-player puzzles and real-time multiplayer rooms using WebSockets.',
-        tech: ['MongoDB', 'Express', 'React', 'Javascript','Node.js', 'WebSockets'],
+        tech: ['MongoDB', 'Express', 'React', 'Javascript', 'Node.js', 'WebSockets'],
     },
     {
         title: 'ShopNSplit',
