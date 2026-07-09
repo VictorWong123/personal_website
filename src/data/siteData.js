@@ -2,7 +2,7 @@ export const profile = {
     name: 'Victor Wong',
     eyebrow: 'Boston / looking to build interesting projects',
     headline: 'Software Engineer.',
-    intro: 'Always Learning. Always Building. Currently an Engineering Intern at Trexon and Undergraduate HCI Researcher at Union College. Previous SWE Intern at BIS Computer Solutions and EpiBuild. If interested in working together, reach out.',
+    intro: 'Always Learning. Always Building. Currently an Engineering Intern at The First Electronics Corporation and Undergraduate HCI Researcher at Union College. Previous SWE Intern at BIS Computer Solutions and EpiBuild. If interested in working together, reach out.',
     note: "When I don't code, you can find me playing chess or working out.",
     email: 'victorwong315@gmail.com',
     resumeHref: `${import.meta.env.BASE_URL}Victor_wong_resume.pdf`,
@@ -14,7 +14,7 @@ export const profile = {
 
 export const workExperience = [
     {
-        company: 'Trexon',
+        company: 'The First Electronics Corporation',
         title: 'Engineering Intern',
         date: 'Jun 2026 - Present',
         description: 'Reduced manual data entry time by building an OCR pipeline with Tesseract.js and Python to convert legacy paper records into structured Excel data.',

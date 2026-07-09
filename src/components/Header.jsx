@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PrimaryNav from './PrimaryNav';
 import { profile } from '../data/siteData';
-import profileImageUrl from '../images/IMG_3041.jpeg';
-import profileHoverImageUrl from '../images/IMG_1192.jpeg';
+import profileImageUrl from '../images/Golden_gate_bridge.jpeg';
+import profileHoverImageUrl from '../images/hiking.jpeg';
 
 const Header = () => (
     <header className="site-header">
