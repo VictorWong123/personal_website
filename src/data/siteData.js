@@ -17,8 +17,8 @@ export const workExperience = [
         company: 'The First Electronics Corporation',
         title: 'Engineering Intern',
         date: 'Jun 2026 - Present',
-        description: 'Reduced manual data entry time by building an OCR pipeline with Tesseract.js and Python to convert legacy paper records into structured Excel data.',
-        tech: ['Python', 'Tesseract.js', 'OCR', 'Excel'],
+        description: '',
+        tech: [''],
     },
     {
         company: 'Union College',
@@ -167,5 +167,37 @@ export const projects = [
         summary: 'Online prices translated into work time.',
         description: 'Chrome extension that converts online prices into estimated work time based on hourly wage. Uses DOM scraping to dynamically detect and replace prices across websites.',
         tech: ['JavaScript', 'HTML', 'CSS'],
+    },
+];
+
+export const notebookSections = [
+    {
+        id: 'contact',
+        type: 'contact',
+        pin: true,
+        pageNumber: '00',
+        eyebrow: '',
+        title: 'Contact information',
+        items: [
+            { label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
+            { label: 'LinkedIn', value: 'linkedin.com/in/victorw12', href: profile.links.linkedin },
+            { label: 'GitHub', value: 'github.com/VictorWong123', href: profile.links.github },
+        ],
+    },
+    {
+        id: 'summary',
+        type: 'summary',
+        pageNumber: '01',
+        eyebrow: '',
+        title: profile.headline,
+        items: [profile.intro],
+    },
+    {
+        id: 'projects',
+        type: 'projects',
+        pageNumber: '02',
+        eyebrow: '',
+        title: 'Selected builds.',
+        items: projects.slice(0, 3),
     },
 ];
