@@ -1,0 +1,836 @@
+{
+  "date": "2026-10-10",
+  "method": {
+    "browser": "Installed Google Chrome, headless, default GPU flags",
+    "backend": "ANGLE Metal / Apple M3",
+    "productionServer": "Vite preview, local production build",
+    "network": "Fresh browser context with cache disabled; throttled case 10 Mbps down, 80 ms latency",
+    "drawMeasurement": "Unique requestAnimationFrame timestamps with real WebGL draw calls; 7.8-second travel samples",
+    "caveats": [
+      "iPad dimensions and DPR are emulated on a Mac; no physical iPad or Safari performance measurement.",
+      "GPU driver shader caches were not forcibly flushed; startup runs are not a controlled percent-improvement benchmark.",
+      "Transfer bytes include request overhead; preview compresses JS/CSS but serves GLB bytes uncompressed.",
+      "One final first-arrival iPad sample had an 83.5 ms frame and 93 ms long task. Repeat traversal was smooth. No unproven layout change was applied."
+    ]
+  },
+  "baseline": [
+    {
+      "mode": "desktop",
+      "readyAt": 3612.699999988079,
+      "firstWorks": {
+        "frames": 471,
+        "fps": 59.87566245413779,
+        "p95": 16.799999999999272,
+        "p99": 16.80000000000109,
+        "max": 33.29999999999927,
+        "hitches": [],
+        "longTasks": [],
+        "status": "works section"
+      },
+      "secondWorks": {
+        "frames": 471,
+        "fps": 60.002553300140434,
+        "p95": 16.700000000000728,
+        "p99": 16.799999999999272,
+        "max": 16.80000000000291,
+        "hitches": [],
+        "longTasks": [],
+        "status": "works section"
+      },
+      "errors": [],
+      "load": {
+        "firstDraw": 1714.7999999821186,
+        "longTasks": [
+          {
+            "start": 495.5,
+            "duration": 83
+          },
+          {
+            "start": 636.6999999880791,
+            "duration": 96
+          },
+          {
+            "start": 826.5999999940395,
+            "duration": 114
+          },
+          {
+            "start": 1004.1999999880791,
+            "duration": 209
+          },
+          {
+            "start": 1227,
+            "duration": 51
+          },
+          {
+            "start": 1578.4000000059605,
+            "duration": 137
+          },
+          {
+            "start": 1716.0999999940395,
+            "duration": 1334
+          },
+          {
+            "start": 3675.199999988079,
+            "duration": 50
+          }
+        ],
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+        "transferBytes": 4541099,
+        "resources": [
+          {
+            "url": "css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap",
+            "start": 349.40000000596046,
+            "duration": 90.89999997615814,
+            "bytes": 972
+          },
+          {
+            "url": "assets/index-CU9KWYlO.css",
+            "start": 349.59999999403954,
+            "duration": 43.69999998807907,
+            "bytes": 4560
+          },
+          {
+            "url": "assets/index-Dx7h3RE8.js",
+            "start": 349.59999999403954,
+            "duration": 55.69999998807907,
+            "bytes": 76370
+          },
+          {
+            "url": "assets/SecretsExperience-B3gl-wEH.js",
+            "start": 486.40000000596046,
+            "duration": 36,
+            "bytes": 291336
+          },
+          {
+            "url": "assets/SecretsExperience-3PqRTuos.css",
+            "start": 486.5,
+            "duration": 3.4000000059604645,
+            "bytes": 3664
+          },
+          {
+            "url": "favicon.svg",
+            "start": 603.4000000059605,
+            "duration": 12.299999982118607,
+            "bytes": 660
+          },
+          {
+            "url": "secrets/project-captures/flexflow-public.jpg",
+            "start": 742.6999999880791,
+            "duration": 7.4000000059604645,
+            "bytes": 61987
+          },
+          {
+            "url": "secrets/project-captures/orbits-public.jpg",
+            "start": 773.5,
+            "duration": 5.299999982118607,
+            "bytes": 12686
+          },
+          {
+            "url": "secrets/project-captures/strengthos-public.jpg",
+            "start": 773.5,
+            "duration": 5.199999988079071,
+            "bytes": 17866
+          },
+          {
+            "url": "secrets/project-captures/shopnsplit-public.jpg",
+            "start": 773.5,
+            "duration": 66.90000000596046,
+            "bytes": 39427
+          },
+          {
+            "url": "secrets/models/terrain-projector.glb",
+            "start": 1277.7999999821186,
+            "duration": 21,
+            "bytes": 207276
+          },
+          {
+            "url": "secrets/project-captures/flexflow-public.jpg",
+            "start": 1364.5,
+            "duration": 5.9000000059604645,
+            "bytes": 61987
+          },
+          {
+            "url": "secrets/models/hooded-robot.glb",
+            "start": 1372.5999999940395,
+            "duration": 70.09999999403954,
+            "bytes": 3278592
+          },
+          {
+            "url": "secrets/models/robot-dog.glb",
+            "start": 1485.699999988079,
+            "duration": 16.900000005960464,
+            "bytes": 483716
+          }
+        ]
+      }
+    },
+    {
+      "mode": "ipad",
+      "readyAt": 1058.5,
+      "firstWorks": {
+        "frames": 470,
+        "fps": 60.002046978148506,
+        "p95": 16.700000000000728,
+        "p99": 16.800000000000182,
+        "max": 16.80000000000109,
+        "hitches": [],
+        "longTasks": [],
+        "status": "works section"
+      },
+      "secondWorks": {
+        "frames": 470,
+        "fps": 60.0020469781485,
+        "p95": 16.700000000000728,
+        "p99": 16.799999999999272,
+        "max": 16.80000000000291,
+        "hitches": [],
+        "longTasks": [],
+        "status": "works section"
+      },
+      "errors": [],
+      "load": {
+        "firstDraw": 930,
+        "longTasks": [
+          {
+            "start": 942.5999999940395,
+            "duration": 94
+          }
+        ],
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+        "transferBytes": 4541099,
+        "resources": [
+          {
+            "url": "css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap",
+            "start": 33.39999997615814,
+            "duration": 102.10000002384186,
+            "bytes": 972
+          },
+          {
+            "url": "assets/index-Dx7h3RE8.js",
+            "start": 34.19999998807907,
+            "duration": 16.69999998807907,
+            "bytes": 76370
+          },
+          {
+            "url": "assets/index-CU9KWYlO.css",
+            "start": 34.39999997615814,
+            "duration": 9.600000023841858,
+            "bytes": 4560
+          },
+          {
+            "url": "assets/SecretsExperience-B3gl-wEH.js",
+            "start": 148,
+            "duration": 23.399999976158142,
+            "bytes": 291336
+          },
+          {
+            "url": "assets/SecretsExperience-3PqRTuos.css",
+            "start": 148.09999999403954,
+            "duration": 1.699999988079071,
+            "bytes": 3664
+          },
+          {
+            "url": "favicon.svg",
+            "start": 172.39999997615814,
+            "duration": 3.600000023841858,
+            "bytes": 660
+          },
+          {
+            "url": "secrets/project-captures/flexflow-public.jpg",
+            "start": 220.2999999821186,
+            "duration": 2.800000011920929,
+            "bytes": 61987
+          },
+          {
+            "url": "secrets/project-captures/strengthos-public.jpg",
+            "start": 220.2999999821186,
+            "duration": 2.9000000059604645,
+            "bytes": 17866
+          },
+          {
+            "url": "secrets/project-captures/shopnsplit-public.jpg",
+            "start": 220.39999997615814,
+            "duration": 2.9000000059604645,
+            "bytes": 39427
+          },
+          {
+            "url": "secrets/project-captures/orbits-public.jpg",
+            "start": 220.39999997615814,
+            "duration": 3,
+            "bytes": 12686
+          },
+          {
+            "url": "secrets/models/terrain-projector.glb",
+            "start": 607.8999999761581,
+            "duration": 3.2000000178813934,
+            "bytes": 207276
+          },
+          {
+            "url": "secrets/project-captures/flexflow-public.jpg",
+            "start": 638.1999999880791,
+            "duration": 1.800000011920929,
+            "bytes": 61987
+          },
+          {
+            "url": "secrets/models/hooded-robot.glb",
+            "start": 641.0999999940395,
+            "duration": 12.900000005960464,
+            "bytes": 3278592
+          },
+          {
+            "url": "secrets/models/robot-dog.glb",
+            "start": 673,
+            "duration": 3.2999999821186066,
+            "bytes": 483716
+          }
+        ]
+      }
+    },
+    {
+      "mode": "desktop-10mbps",
+      "readyAt": 4612.300000011921,
+      "firstWorks": {
+        "frames": 467,
+        "fps": 59.36532606341645,
+        "p95": 16.799999999999272,
+        "p99": 16.80000000000109,
+        "max": 100,
+        "hitches": [
+          {
+            "at": 5610.30000000596,
+            "ms": 100
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 5511.300000011921,
+            "ms": 102
+          }
+        ],
+        "status": "works section"
+      },
+      "secondWorks": {
+        "frames": 471,
+        "fps": 60.002553300140434,
+        "p95": 16.700000000000728,
+        "p99": 16.799999999999272,
+        "max": 16.80000000000291,
+        "hitches": [],
+        "longTasks": [],
+        "status": "works section"
+      },
+      "errors": [],
+      "load": {
+        "firstDraw": 4220.4000000059605,
+        "longTasks": [
+          {
+            "start": 4221.700000017881,
+            "duration": 72
+          },
+          {
+            "start": 4659,
+            "duration": 50
+          }
+        ],
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+        "transferBytes": 4541099,
+        "resources": [
+          {
+            "url": "css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap",
+            "start": 88.90000000596046,
+            "duration": 129.69999998807907,
+            "bytes": 972
+          },
+          {
+            "url": "assets/index-CU9KWYlO.css",
+            "start": 89,
+            "duration": 89.7000000178814,
+            "bytes": 4560
+          },
+          {
+            "url": "assets/index-Dx7h3RE8.js",
+            "start": 89,
+            "duration": 148.59999999403954,
+            "bytes": 76370
+          },
+          {
+            "url": "assets/SecretsExperience-B3gl-wEH.js",
+            "start": 250.7000000178814,
+            "duration": 334.89999997615814,
+            "bytes": 291336
+          },
+          {
+            "url": "assets/SecretsExperience-3PqRTuos.css",
+            "start": 250.80000001192093,
+            "duration": 88.69999998807907,
+            "bytes": 3664
+          },
+          {
+            "url": "favicon.svg",
+            "start": 276.7000000178814,
+            "duration": 82.19999998807907,
+            "bytes": 660
+          },
+          {
+            "url": "secrets/project-captures/flexflow-public.jpg",
+            "start": 624.4000000059605,
+            "duration": 211.90000000596046,
+            "bytes": 61987
+          },
+          {
+            "url": "secrets/project-captures/strengthos-public.jpg",
+            "start": 627.5999999940395,
+            "duration": 142.60000002384186,
+            "bytes": 17866
+          },
+          {
+            "url": "secrets/project-captures/orbits-public.jpg",
+            "start": 627.7000000178814,
+            "duration": 131.69999998807907,
+            "bytes": 12686
+          },
+          {
+            "url": "secrets/project-captures/shopnsplit-public.jpg",
+            "start": 627.7000000178814,
+            "duration": 179.7999999821186,
+            "bytes": 39427
+          },
+          {
+            "url": "secrets/models/terrain-projector.glb",
+            "start": 731.8000000119209,
+            "duration": 260.59999999403954,
+            "bytes": 207276
+          },
+          {
+            "url": "secrets/project-captures/flexflow-public.jpg",
+            "start": 1005.2000000178814,
+            "duration": 214,
+            "bytes": 61987
+          },
+          {
+            "url": "secrets/models/hooded-robot.glb",
+            "start": 1007.5,
+            "duration": 3154.7000000178814,
+            "bytes": 3278592
+          },
+          {
+            "url": "secrets/models/robot-dog.glb",
+            "start": 1034,
+            "duration": 904.9000000059605,
+            "bytes": 483716
+          }
+        ]
+      }
+    }
+  ],
+  "final": [
+    {
+      "mode": "desktop",
+      "readyAt": 1017.4000000059605,
+      "firstWorks": {
+        "frames": 471,
+        "fps": 60.002553300140434,
+        "p95": 16.700000000000728,
+        "p99": 16.800000000000182,
+        "max": 16.80000000000109,
+        "hitches": [],
+        "cubeAttachments": 0,
+        "longTasks": [],
+        "status": "works section"
+      },
+      "secondWorks": {
+        "frames": 470,
+        "fps": 60.0020469781485,
+        "p95": 16.799999999999272,
+        "p99": 16.799999999999272,
+        "max": 16.80000000000291,
+        "hitches": [],
+        "cubeAttachments": 0,
+        "longTasks": [],
+        "status": "works section"
+      },
+      "errors": [],
+      "load": {
+        "firstDraw": 872.4000000059605,
+        "longTasks": [
+          {
+            "start": 936.9000000059605,
+            "duration": 68
+          }
+        ],
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+        "transferBytes": 4409256,
+        "resources": [
+          {
+            "url": "css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap",
+            "start": 21.400000005960464,
+            "duration": 90.19999998807907,
+            "bytes": 972
+          },
+          {
+            "url": "assets/index-CU9KWYlO.css",
+            "start": 21.5,
+            "duration": 17.5,
+            "bytes": 4560
+          },
+          {
+            "url": "assets/index-SFNJ9-Yi.js",
+            "start": 21.5,
+            "duration": 31.400000005960464,
+            "bytes": 76372
+          },
+          {
+            "url": "assets/SecretsExperience-CX9DMh3E.js",
+            "start": 128.40000000596046,
+            "duration": 32.5,
+            "bytes": 291457
+          },
+          {
+            "url": "assets/SecretsExperience-3PqRTuos.css",
+            "start": 128.5,
+            "duration": 3.300000011920929,
+            "bytes": 3664
+          },
+          {
+            "url": "favicon.svg",
+            "start": 155.40000000596046,
+            "duration": 2.0999999940395355,
+            "bytes": 660
+          },
+          {
+            "url": "secrets/models/terrain-projector.glb",
+            "start": 550.0999999940395,
+            "duration": 2,
+            "bytes": 207276
+          },
+          {
+            "url": "secrets/project-captures/flexflow-public.jpg",
+            "start": 563.0999999940395,
+            "duration": 1.300000011920929,
+            "bytes": 61987
+          },
+          {
+            "url": "secrets/models/hooded-robot.glb",
+            "start": 565.7000000178814,
+            "duration": 10.299999982118607,
+            "bytes": 3278592
+          },
+          {
+            "url": "secrets/models/robot-dog.glb",
+            "start": 597.2000000178814,
+            "duration": 2.2999999821186066,
+            "bytes": 483716
+          }
+        ]
+      }
+    },
+    {
+      "mode": "ipad",
+      "readyAt": 1067.300000011921,
+      "firstWorks": {
+        "frames": 466,
+        "fps": 59.49030244102144,
+        "p95": 16.700000000000728,
+        "p99": 16.800000000000182,
+        "max": 83.5,
+        "hitches": [
+          {
+            "at": 5606.60000000596,
+            "ms": 83.5
+          }
+        ],
+        "cubeAttachments": 0,
+        "longTasks": [
+          {
+            "at": 5523.5999999940395,
+            "ms": 93
+          }
+        ],
+        "status": "works section"
+      },
+      "secondWorks": {
+        "frames": 481,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "p99": 16.80000000000291,
+        "max": 16.80000000000291,
+        "hitches": [],
+        "cubeAttachments": 0,
+        "longTasks": [],
+        "status": "works section"
+      },
+      "errors": [],
+      "load": {
+        "firstDraw": 926.8000000119209,
+        "longTasks": [
+          {
+            "start": 992.4000000059605,
+            "duration": 65
+          }
+        ],
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+        "transferBytes": 4409256,
+        "resources": [
+          {
+            "url": "css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap",
+            "start": 27.19999998807907,
+            "duration": 109.40000000596046,
+            "bytes": 972
+          },
+          {
+            "url": "assets/index-SFNJ9-Yi.js",
+            "start": 27.400000005960464,
+            "duration": 33,
+            "bytes": 76372
+          },
+          {
+            "url": "assets/index-CU9KWYlO.css",
+            "start": 31.5,
+            "duration": 20,
+            "bytes": 4560
+          },
+          {
+            "url": "assets/SecretsExperience-3PqRTuos.css",
+            "start": 151.09999999403954,
+            "duration": 2.4000000059604645,
+            "bytes": 3664
+          },
+          {
+            "url": "assets/SecretsExperience-CX9DMh3E.js",
+            "start": 151.09999999403954,
+            "duration": 24.30000001192093,
+            "bytes": 291457
+          },
+          {
+            "url": "favicon.svg",
+            "start": 175.5,
+            "duration": 2.5999999940395355,
+            "bytes": 660
+          },
+          {
+            "url": "secrets/models/terrain-projector.glb",
+            "start": 594.9000000059605,
+            "duration": 3,
+            "bytes": 207276
+          },
+          {
+            "url": "secrets/project-captures/flexflow-public.jpg",
+            "start": 615.4000000059605,
+            "duration": 1.5999999940395355,
+            "bytes": 61987
+          },
+          {
+            "url": "secrets/models/hooded-robot.glb",
+            "start": 617.5999999940395,
+            "duration": 6.800000011920929,
+            "bytes": 3278592
+          },
+          {
+            "url": "secrets/models/robot-dog.glb",
+            "start": 646.5,
+            "duration": 2.800000011920929,
+            "bytes": 483716
+          }
+        ]
+      }
+    },
+    {
+      "mode": "desktop-10mbps",
+      "readyAt": 4598.699999988079,
+      "firstWorks": {
+        "frames": 471,
+        "fps": 60.00255330014044,
+        "p95": 16.700000000000728,
+        "p99": 16.80000000000109,
+        "max": 16.80000000000109,
+        "hitches": [],
+        "cubeAttachments": 0,
+        "longTasks": [],
+        "status": "works section"
+      },
+      "secondWorks": {
+        "frames": 471,
+        "fps": 60.002553300140434,
+        "p95": 16.700000000000728,
+        "p99": 16.799999999999272,
+        "max": 16.80000000000291,
+        "hitches": [],
+        "cubeAttachments": 0,
+        "longTasks": [],
+        "status": "works section"
+      },
+      "errors": [],
+      "load": {
+        "firstDraw": 4244,
+        "longTasks": [
+          {
+            "start": 4300.199999988079,
+            "duration": 62
+          }
+        ],
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+        "transferBytes": 4409256,
+        "resources": [
+          {
+            "url": "css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap",
+            "start": 92.89999997615814,
+            "duration": 128.90000000596046,
+            "bytes": 972
+          },
+          {
+            "url": "assets/index-CU9KWYlO.css",
+            "start": 93,
+            "duration": 95,
+            "bytes": 4560
+          },
+          {
+            "url": "assets/index-SFNJ9-Yi.js",
+            "start": 93,
+            "duration": 152.69999998807907,
+            "bytes": 76372
+          },
+          {
+            "url": "assets/SecretsExperience-CX9DMh3E.js",
+            "start": 259.89999997615814,
+            "duration": 330.2000000178814,
+            "bytes": 291457
+          },
+          {
+            "url": "assets/SecretsExperience-3PqRTuos.css",
+            "start": 260.09999999403954,
+            "duration": 88.69999998807907,
+            "bytes": 3664
+          },
+          {
+            "url": "favicon.svg",
+            "start": 287.39999997615814,
+            "duration": 83,
+            "bytes": 660
+          },
+          {
+            "url": "secrets/models/terrain-projector.glb",
+            "start": 735.1999999880791,
+            "duration": 250.80000001192093,
+            "bytes": 207276
+          },
+          {
+            "url": "secrets/project-captures/flexflow-public.jpg",
+            "start": 999.1999999880791,
+            "duration": 214.80000001192093,
+            "bytes": 61987
+          },
+          {
+            "url": "secrets/models/hooded-robot.glb",
+            "start": 1001.2999999821186,
+            "duration": 3177.4000000059605,
+            "bytes": 3278592
+          },
+          {
+            "url": "secrets/models/robot-dog.glb",
+            "start": 1038.2999999821186,
+            "duration": 887.4000000059605,
+            "bytes": 483716
+          }
+        ]
+      }
+    }
+  ],
+  "earlierViewportSteadyRendering": [
+    {
+      "name": "desktop",
+      "viewport": {
+        "width": 1470,
+        "height": 698
+      },
+      "idle": {
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+        "drawFrames": 361,
+        "drawCalls": 50901,
+        "fps": 60.003000150007495,
+        "p95Ms": 16.700000000000728
+      },
+      "travel": {
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+        "drawFrames": 332,
+        "drawCalls": 48029,
+        "fps": 55.017203264464875,
+        "p95Ms": 16.799999999999272
+      },
+      "status": "works section",
+      "fallback": 0,
+      "errors": []
+    },
+    {
+      "name": "ipad-portrait",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "idle": {
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+        "drawFrames": 361,
+        "drawCalls": 50901,
+        "fps": 60.0020000666689,
+        "p95Ms": 16.700000000000728
+      },
+      "travel": {
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+        "drawFrames": 361,
+        "drawCalls": 51780,
+        "fps": 60.00200006666888,
+        "p95Ms": 16.700000000000728
+      },
+      "status": "works section",
+      "fallback": 0,
+      "errors": []
+    },
+    {
+      "name": "ipad-landscape",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "idle": {
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+        "drawFrames": 360,
+        "drawCalls": 50760,
+        "fps": 60.00334280461307,
+        "p95Ms": 16.799999999999272
+      },
+      "travel": {
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+        "drawFrames": 361,
+        "drawCalls": 51788,
+        "fps": 60.002000066668884,
+        "p95Ms": 16.700000000000728
+      },
+      "status": "works section",
+      "fallback": 0,
+      "errors": []
+    }
+  ],
+  "isolationAndIdle": {
+    "mainPageModelRequests": 0,
+    "hiddenDrawsAfterSettling": 0,
+    "reducedMotionIdleDraws": 0,
+    "reducedMotionWorksIdleDraws": 0,
+    "reducedMotionStatus": "works section"
+  },
+  "verification": {
+    "typecheck": "passed",
+    "eslint": "passed",
+    "runtimeUnitTests": {
+      "passed": 17,
+      "failed": 0
+    },
+    "playwright": {
+      "passed": 10,
+      "skipped": 2,
+      "failed": 0,
+      "skipReason": "Tablet duplicates of the desktop motion-enabled intro/rapid-navigation state path"
+    },
+    "productionBuild": "passed",
+    "assetCopies": "SHA-256 equal to approved production exports",
+    "diffWhitespaceCheck": "passed"
+  }
+}

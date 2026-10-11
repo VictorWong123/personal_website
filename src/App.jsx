@@ -6,7 +6,7 @@ import Work from './pages/Work';
 import Projects from './pages/Projects';
 import ThemedNotFound from './pages/ThemedNotFound';
 
-const Notebook = lazy(() => import('./pages/Notebook'));
+const SecretsExperience = lazy(() => import('./secrets/SecretsExperience'));
 
 function App() {
     return (
@@ -21,8 +21,23 @@ function App() {
                 <Route
                     path="/secrets"
                     element={(
-                        <Suspense fallback={null}>
-                            <Notebook />
+                        <Suspense fallback={(
+                            <main style={{
+                                alignItems: 'center',
+                                background: '#030608',
+                                color: '#e5ecea',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                fontFamily: 'IBM Plex Mono, monospace',
+                                gap: '20px',
+                                justifyContent: 'center',
+                                minHeight: '100svh',
+                            }}>
+                                <p role="status">Loading 3D portfolio…</p>
+                                <a href="/" style={{ color: 'inherit' }}>Exit to main portfolio</a>
+                            </main>
+                        )}>
+                            <SecretsExperience />
                         </Suspense>
                     )}
                 />

@@ -1,0 +1,285 @@
+{
+  "date": "2026-10-11",
+  "method": "Production preview; installed headless Chrome, default GPU flags; unique requestAnimationFrame timestamps with WebGL draw calls. iPad sizes are emulated on the Mac, not physical device measurements.",
+  "samples": [
+    {
+      "mode": "desktop",
+      "viewport": {
+        "width": 1470,
+        "height": 918
+      },
+      "readyMs": 3139,
+      "transferBytes": 4412878,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+      "idle": {
+        "frames": 73,
+        "fps": 30,
+        "p95Ms": 33.400000000000546,
+        "maxMs": 33.400000000000546,
+        "longTasks": [],
+        "status": "Explore the signals in the scene"
+      },
+      "travel": {
+        "frames": 213,
+        "fps": 29.242589348524763,
+        "p95Ms": 33.400000000001455,
+        "maxMs": 183.3000000000011,
+        "longTasks": [
+          {
+            "startTime": 14552.90000000596,
+            "duration": 89
+          }
+        ],
+        "status": "Project archive opened"
+      },
+      "projectSwitch": {
+        "frames": 72,
+        "fps": 29.179681078415246,
+        "p95Ms": 33.400000000001455,
+        "maxMs": 100.09999999999854,
+        "longTasks": [],
+        "status": "Project archive opened"
+      },
+      "errors": []
+    },
+    {
+      "mode": "ipad-portrait",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "readyMs": 938.6999999880791,
+      "transferBytes": 4412878,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+      "idle": {
+        "frames": 73,
+        "fps": 30.00125005208551,
+        "p95Ms": 33.400000000000546,
+        "maxMs": 33.400000000000546,
+        "longTasks": [],
+        "status": "Explore the signals in the scene"
+      },
+      "travel": {
+        "frames": 218,
+        "fps": 30.001382552191345,
+        "p95Ms": 33.400000000000546,
+        "maxMs": 33.5,
+        "longTasks": [],
+        "status": "Project archive opened"
+      },
+      "projectSwitch": {
+        "frames": 74,
+        "fps": 30.001643925694548,
+        "p95Ms": 33.400000000001455,
+        "maxMs": 33.400000000001455,
+        "longTasks": [],
+        "status": "Project archive opened"
+      },
+      "errors": []
+    },
+    {
+      "mode": "ipad-landscape",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "readyMs": 968.7999999821186,
+      "transferBytes": 4412878,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+      "idle": {
+        "frames": 72,
+        "fps": 30.00084509422801,
+        "p95Ms": 33.40000000000009,
+        "maxMs": 33.400000000000546,
+        "longTasks": [],
+        "status": "Explore the signals in the scene"
+      },
+      "travel": {
+        "frames": 218,
+        "fps": 30.000967773153974,
+        "p95Ms": 33.400000000000546,
+        "maxMs": 33.400000000001455,
+        "longTasks": [],
+        "status": "Project archive opened"
+      },
+      "projectSwitch": {
+        "frames": 74,
+        "fps": 30.001643925694573,
+        "p95Ms": 33.400000000001455,
+        "maxMs": 33.400000000001455,
+        "longTasks": [],
+        "status": "Project archive opened"
+      },
+      "errors": []
+    },
+    {
+      "mode": "desktop-10mbps",
+      "viewport": {
+        "width": 1470,
+        "height": 918
+      },
+      "readyMs": 4604.4000000059605,
+      "transferBytes": 4412878,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+      "idle": {
+        "frames": 72,
+        "fps": 30.000845094228,
+        "p95Ms": 33.400000000000546,
+        "maxMs": 33.400000000000546,
+        "longTasks": [],
+        "status": "Explore the signals in the scene"
+      },
+      "travel": {
+        "frames": 218,
+        "fps": 30.00096777315397,
+        "p95Ms": 33.400000000001455,
+        "maxMs": 33.400000000001455,
+        "longTasks": [
+          {
+            "startTime": 9104.300000011921,
+            "duration": 52
+          }
+        ],
+        "status": "Project archive opened"
+      },
+      "projectSwitch": {
+        "frames": 74,
+        "fps": 30.00041096453377,
+        "p95Ms": 33.400000000001455,
+        "maxMs": 33.400000000001455,
+        "longTasks": [],
+        "status": "Project archive opened"
+      },
+      "errors": []
+    }
+  ],
+  "rapidTravel": {
+    "frames": 220,
+    "fps": 30.000821940327135,
+    "p95Ms": 33.400000000001455,
+    "maxMs": 33.400000000001455,
+    "longTasks": [
+      {
+        "startTime": 29191.09999999404,
+        "duration": 51
+      }
+    ],
+    "status": "Contact beacon opened",
+    "latestContactOpened": true
+  },
+  "reducedMotionIdle": {
+    "frames": 0,
+    "fps": null,
+    "longTasks": [],
+    "status": "Explore the signals in the scene"
+  },
+  "simulatedHiddenIdle": {
+    "frames": 0,
+    "fps": null,
+    "callbackFps": null,
+    "longTasks": [],
+    "status": "Explore the signals in the scene"
+  },
+  "mainPageSecretsRequests": [],
+  "followup": {
+    "date": "2026-10-11",
+    "method": "Production preview; installed headless Chrome, default GPU flags; unique requestAnimationFrame timestamps with WebGL draw calls. iPad sizes are emulated on the Mac, not physical device measurements.",
+    "samples": [
+      {
+        "mode": "desktop",
+        "viewport": {
+          "width": 1470,
+          "height": 918
+        },
+        "readyMs": 1094,
+        "transferBytes": 4412878,
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3, Unspecified Version)",
+        "idle": {
+          "frames": 73,
+          "fps": 30.001250052085496,
+          "callbackFps": 30.001250052085496,
+          "p95Ms": 33.400000000000546,
+          "maxMs": 33.400000000000546,
+          "longTasks": [],
+          "status": "Explore the signals in the scene"
+        },
+        "travel": {
+          "frames": 218,
+          "fps": 30.00096777315397,
+          "callbackFps": 30.00096777315397,
+          "p95Ms": 33.400000000001455,
+          "maxMs": 33.5,
+          "longTasks": [],
+          "status": "Project archive opened"
+        },
+        "projectSwitch": {
+          "frames": 74,
+          "fps": 30.00041096453377,
+          "callbackFps": 30.00041096453377,
+          "p95Ms": 33.400000000001455,
+          "maxMs": 33.400000000001455,
+          "longTasks": [],
+          "status": "Project archive opened"
+        },
+        "errors": []
+      }
+    ],
+    "blankPageRaf": {
+      "fps": 29.166666666666668
+    },
+    "rapidTravel": {
+      "frames": 220,
+      "fps": 30.001232927380588,
+      "callbackFps": 30.001232927380588,
+      "p95Ms": 33.400000000001455,
+      "maxMs": 33.400000000001455,
+      "longTasks": [],
+      "status": "Contact beacon opened",
+      "latestContactOpened": true
+    },
+    "reducedMotionIdle": {
+      "frames": 0,
+      "fps": null,
+      "callbackFps": null,
+      "longTasks": [],
+      "status": "Explore the signals in the scene"
+    },
+    "simulatedHiddenIdle": {
+      "frames": 0,
+      "fps": null,
+      "callbackFps": null,
+      "longTasks": [],
+      "status": "Explore the signals in the scene"
+    },
+    "mainPageSecretsRequests": []
+  },
+  "notes": [
+    "A blank-page requestAnimationFrame baseline measured 29.17 FPS in the same browser session; scene callbacks and rendered frames both measured 30 FPS. No application frame-rate cap was introduced.",
+    "The first desktop archive arrival had a 183.3 ms frame gap and 89 ms long task; its first project switch had a 100.1 ms gap. Neither recurred in the desktop follow-up, tablet-size samples, or throttled desktop sample. Cause was not established.",
+    "Visibility suspension was tested by overriding document.visibilityState to hidden and dispatching visibilitychange. This is a hook/render-loop test, not a physical background-tab measurement.",
+    "GPU driver shader caches were not flushed. Fresh network contexts do not imply a cold GPU cache.",
+    "No physical iPad or Safari performance test was available."
+  ],
+  "verification": {
+    "typecheck": "passed",
+    "lint": "passed",
+    "runtimeUnitTests": {
+      "passed": 20,
+      "failed": 0
+    },
+    "playwright": {
+      "passed": 10,
+      "skipped": 2,
+      "failed": 0,
+      "skipReason": "Duplicate tablet motion paths; both tablet layout and failure cases still run"
+    },
+    "motionInterruptedArrival": "Actual Chrome GPU run reached latest Contact beacon without reduced-motion fallback",
+    "productionBuild": "passed",
+    "whitespaceDiffCheck": "passed",
+    "lazyJavaScript": {
+      "rawBytes": 1069192,
+      "gzipBytes": 294271
+    },
+    "modelBytes": 3968684
+  }
+}
